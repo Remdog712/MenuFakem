@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orange Juice Menu</title>
+    <title>Citrus Code Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/RO_Web.ico" type="image/x-icon">
     <style>
         /* Basic Reset */
         * {
@@ -13,9 +15,9 @@
         }
         /* Body Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'League Spartan', sans-serif;
             background-color: #fff3e0;
-            color: #ff6b00;
+            color: #4A4A4A;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,14 +25,19 @@
         }
         /* Container Styling */
         .container {
-            max-width: 600px;
+            max-width: 700px;
             padding: 20px;
             text-align: center;
         }
-        h1 {
-            font-size: 2.5em;
+        /* Logo and Tagline */
+        .logo {
+            width: 200px;
             margin-bottom: 10px;
-            color: #ff8500;
+        }
+        .tagline {
+            font-size: 1.2em;
+            color: #D97742;
+            margin-bottom: 20px;
         }
         /* About Section */
         .about-section {
@@ -41,10 +48,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .about-section img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-top: 10px;
+            width: 120px;
+            height: 120px;
+            margin-top: 15px;
         }
         /* Menu Items */
         .menu-item {
@@ -53,78 +59,76 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 15px 20px;
+            padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .item-details {
-            text-align: left;
-            flex-grow: 1;
-        }
-        .item-name {
-            font-size: 1.5em;
-            color: #ff8500;
-        }
-        .item-description {
-            font-size: 0.9em;
-            color: #666;
+        .menu-item div {
+            text-align: center;
+            flex: 1;
         }
         .qr-image {
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        .label {
+            font-size: 1em;
+            font-weight: bold;
+            color: #4A4A4A;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Page Title -->
-    <h1>Orange Juice Menu</h1>
+    <!-- Logo -->
+    <img src="images/Logo.png" alt="Citrus Code Logo" class="logo">
+    <!-- Tagline -->
+    <div class="tagline">A Modern Orange Juice Experience!</div>
 
     <!-- About Section QR Code -->
     <div class="about-section">
-        <h2>About Our Juices</h2>
-        <p>Discover the freshest, juiciest orange variations with unique flavors and benefits.</p>
-        <img src="about_qr_code.png" alt="QR Code for About Section">
+        <h2>About Us and Our Juices</h2>
+        <p>Scan to View Our Story!</p>
+        <img src="images/about.png" alt="QR Code for About Section">
     </div>
 
     <!-- Menu Items with QR Codes -->
     <div class="menu">
         <div class="menu-item">
-            <div class="item-details">
-                <div class="item-name">Classic Orange Juice</div>
-                <div class="item-description">Pure and refreshing, with no additives.</div>
+            <div>
+                <span class="label">Scan for item</span>
+                <img class="qr-image" src="images/qrcode1.png" alt="QR Code for Item 1">
             </div>
-            <img class="qr-image" src="classic_oj_qr.png" alt="QR Code for Classic Orange Juice">
-            <img class="qr-image" src="price_classic_qr.png" alt="QR Code for Classic Juice Price">
+            <div>
+                <span class="label">Scan for price</span>
+                <img class="qr-image" src="images/price1.png" alt="QR Code for Price 1">
+            </div>
         </div>
         
         <div class="menu-item">
-            <div class="item-details">
-                <div class="item-name">Tropical Orange Twist</div>
-                <div class="item-description">A blend of orange, mango, and pineapple.</div>
+            <div>
+                <span class="label">Scan for item</span>
+                <img class="qr-image" src="images/item2.png" alt="QR Code for Item 2">
             </div>
-            <img class="qr-image" src="tropical_twist_qr.png" alt="QR Code for Tropical Orange Twist">
-            <img class="qr-image" src="price_tropical_qr.png" alt="QR Code for Tropical Twist Price">
+            <div>
+                <span class="label">Scan for price</span>
+                <img class="qr-image" src="images/price2.png" alt="QR Code for Price 2">
+            </div>
         </div>
 
+        <!-- Additional items structured similarly -->
         <div class="menu-item">
-            <div class="item-details">
-                <div class="item-name">Ginger Zest Orange Juice</div>
-                <div class="item-description">Orange juice with a hint of spicy ginger.</div>
+            <div>
+                <span class="label">Scan for item</span>
+                <img class="qr-image" src="images/item3.png" alt="QR Code for Item 3">
             </div>
-            <img class="qr-image" src="ginger_zest_qr.png" alt="QR Code for Ginger Zest Orange Juice">
-            <img class="qr-image" src="price_ginger_zest_qr.png" alt="QR Code for Ginger Zest Price">
-        </div>
-
-        <div class="menu-item">
-            <div class="item-details">
-                <div class="item-name">Orange-Carrot Boost</div>
-                <div class="item-description">A healthy mix of orange and carrot juice.</div>
+            <div>
+                <span class="label">Scan for price</span>
+                <img class="qr-image" src="images/price3.png" alt="QR Code for Price 3">
             </div>
-            <img class="qr-image" src="orange_carrot_qr.png" alt="QR Code for Orange Carrot Boost">
-            <img class="qr-image" src="price_orange_carrot_qr.png" alt="QR Code for Orange Carrot Boost Price">
         </div>
     </div>
 </div>
